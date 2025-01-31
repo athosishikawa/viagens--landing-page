@@ -1,0 +1,177 @@
+html {
+    width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --nav-height: 60px;
+    overflow-x: hidden;
+    font-size: 16px; 
+    scroll-behavior: smooth;
+
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+main {
+    margin: 0 5%;
+    max-width: 100%;
+    padding-top: var(--nav-height); /* Use padding instead of margin for top spacing */
+
+    margin-top: var(--nav-height);
+}
+
+nav {
+    height: var(--nav-height);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(224, 224, 224, 0.5);
+    z-index: 100;
+    backdrop-filter: blur(6px);
+}
+
+nav a {
+    padding:1rem;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgb(126, 126, 126);
+    color: #ffffff;
+}
+
+.banner {
+    background-image: url("https://www.civitatis.com/f/japon/shirakawa/shirakawa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.banner h1 {
+    font-size: 8vw;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    color: antiquewhite;
+    padding: 2rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.destinations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens */
+    gap: 1rem;
+
+}
+
+.destinations figure{
+    background-color: #f5f4f4;
+    width: 30%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona um leve sombreamento */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 2%;
+    
+}
+
+.destinations figure:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.destinations img{
+    width: 80%;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+.destinations figcaption{
+    width: 80%;
+
+}
+
+#TripMe, #MeetUs, #Advice{
+    padding: 5%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+
+        padding: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .banner h1 {
+        font-size: 8vw;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row;
+        gap: 0.3rem;
+        padding: 0.5rem; 
+
+    }
+
+    .banner {
+        height: 60vh;
+    }
+
+    .banner h1 {
+        font-size: 6vw;
+        padding: 1rem;
+    }
+}
